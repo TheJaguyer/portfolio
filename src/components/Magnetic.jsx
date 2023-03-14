@@ -41,7 +41,6 @@ export default function Magnetic({ text, size, offset, mousePos, setSelected }) 
       ref={el}
       className={`absolute cursor-default bg-black text-white  ${size}`}
       style={style}
-      onClick={setSelected}
       onMouseEnter={setSelected}
     >
       {text}

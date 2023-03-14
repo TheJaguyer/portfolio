@@ -1,7 +1,7 @@
 export default function AboutMeFill() {
   return (
-    <div className="flex h-4/5 w-4/5 flex-col items-end justify-evenly text-white">
-      <div className="justify-self-start" style={{ fontSize: '2em' }}>
+    <div className=" h-4/5 w-4/5  text-white">
+      <div className="-mt-6" style={{ fontSize: '2em' }}>
         projects
       </div>
 
