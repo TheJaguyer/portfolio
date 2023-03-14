@@ -11,14 +11,12 @@ export default function Home() {
   const [bottomRight, setBottomRight] = useState([400, 400]);
   const [bottomLeft, setBottomLeft] = useState([200, 400]);
   const [mousePos, setMousePos] = useState([0, 0]);
-  const [loaded, setLoaded] = useState(false);
   const [fade, setFade] = useState(false);
 
   const [choice, setChoice] = useState('none');
 
   useEffect(() => {
-    awaitLoad();
-    awaitFade();
+    setFade(true);
     getSize();
     window.addEventListener('resize', getSize);
   }, []);
@@ -33,22 +31,6 @@ export default function Home() {
 
   function trackMouse(e) {
     setMousePos([e.clientX, e.clientY]);
-  }
-
-  function printSize() {
-    // console.log(Math.floor(offset * 0.25));
-  }
-
-  function awaitLoad() {
-    setTimeout(() => {
-      setLoaded(true);
-    }, 1000);
-  }
-
-  function awaitFade() {
-    setTimeout(() => {
-      setFade(true);
-    }, 500);
   }
 
   function chooseAboutMe() {
@@ -66,7 +48,7 @@ export default function Home() {
   }
 
   return (
-    <div className="h-screen w-full bg-black p-10" onClick={printSize} onMouseMove={(e) => trackMouse(e)}>
+    <div className="h-screen w-full bg-black p-10" onMouseMove={(e) => trackMouse(e)}>
       <div
         className="h-full  border-4 border-white outline outline-[40px] outline-black"
         ref={edgeRef}
@@ -83,13 +65,13 @@ export default function Home() {
         <Magnetic offset={bottomLeft} text="about me" size="text-3xl" mousePos={mousePos} setSelected={chooseAboutMe} />
         <AboutMe selected={choice} />
         <Projects selected={choice} />
+
+        <div
+          className="absolute right-0 top-0 h-full w-full border-4 border-white bg-black  transition-all delay-200 duration-500 ease-in-out"
+          style={fade ? { height: '0', width: '0' } : {}}
+        ></div>
+
         <Masks />
-        {!loaded && (
-          <div
-            className="absolute left-0 top-0 h-full w-full  transition-all"
-            style={!fade ? { backgroundColor: 'black' } : {}}
-          ></div>
-        )}
       </div>
     </div>
   );
