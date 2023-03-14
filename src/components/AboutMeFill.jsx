@@ -32,10 +32,10 @@ export default function AboutMeFill() {
       </div>
 
       <div className="flex w-full items-center justify-around">
-        <a href="https://github.com/TheJaguyer">
+        <a href="https://github.com/TheJaguyer" target="_blank">
           <img style={{ height: '2em' }} src="./images/GitHub_Logo_White.png" alt="" />
         </a>
-        <a href="https://www.linkedin.com/in/thejaguyer/">
+        <a href="https://www.linkedin.com/in/thejaguyer/" target="_blank">
           <img className="" style={{ height: '1.5em' }} src="./images/LI-Logo.png" alt="" />
         </a>
 
