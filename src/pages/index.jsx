@@ -11,10 +11,14 @@ export default function Home() {
   const [bottomRight, setBottomRight] = useState([400, 400]);
   const [bottomLeft, setBottomLeft] = useState([200, 400]);
   const [mousePos, setMousePos] = useState([0, 0]);
+  const [loaded, setLoaded] = useState(false);
+  const [fade, setFade] = useState(false);
 
   const [choice, setChoice] = useState('none');
 
   useEffect(() => {
+    awaitLoad();
+    awaitFade();
     getSize();
     window.addEventListener('resize', getSize);
   }, []);
@@ -33,6 +37,18 @@ export default function Home() {
 
   function printSize() {
     // console.log(Math.floor(offset * 0.25));
+  }
+
+  function awaitLoad() {
+    setTimeout(() => {
+      setLoaded(true);
+    }, 1000);
+  }
+
+  function awaitFade() {
+    setTimeout(() => {
+      setFade(true);
+    }, 500);
   }
 
   function chooseAboutMe() {
@@ -68,6 +84,12 @@ export default function Home() {
         <AboutMe selected={choice} />
         <Projects selected={choice} />
         <Masks />
+        {!loaded && (
+          <div
+            className="absolute left-0 top-0 h-full w-full  transition-all"
+            style={!fade ? { backgroundColor: 'black' } : {}}
+          ></div>
+        )}
       </div>
     </div>
   );
