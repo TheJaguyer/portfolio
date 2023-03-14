@@ -13,6 +13,18 @@ module.exports = {
       transitionTimingFunction: {
         bounce: 'cubic-bezier(.82,.58,.46,1.19)',
         'out-expo': 'cubic-bezier(0.19, 1, 0.22, 1)'
+      },
+      boxShadow: {
+        edges: 'inset 20px 0 20px -10px black, inset -20px 0 20px -10px  red'
+      },
+      animation: {
+        scroller: 'scroll linear 10s infinite'
+      },
+      keyframes: {
+        scroll: {
+          '0%': { transform: 'translate(0)' },
+          '100%': { transform: 'translate(-60em)' }
+        }
       }
     }
   },

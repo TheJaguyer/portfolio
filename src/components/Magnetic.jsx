@@ -37,8 +37,18 @@ export default function Magnetic({ text, size, offset, mousePos, setSelected }) 
   useEffect(calcPull, [mousePos, offset]);
 
   return (
-    <div ref={el} className={`absolute cursor-default text-white  ${size}`} style={style} onClick={setSelected}>
+    <div
+      ref={el}
+      className={`absolute cursor-default bg-black text-white  ${size}`}
+      style={style}
+      onClick={setSelected}
+      onMouseEnter={setSelected}
+    >
       {text}
+
+      {/* <div className="mt-2 h-4 w-full rounded-lg bg-black">
+        <div className="h-full w-0 rounded-lg bg-gray-500 transition-all ease-linear" style={{ width: 50 + '%' }}></div>
+      </div> */}
     </div>
   );
 }
