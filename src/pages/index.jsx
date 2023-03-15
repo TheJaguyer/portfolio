@@ -10,7 +10,6 @@ export default function Home() {
   const [topLeft, setTopLeft] = useState([1000, 0]);
   const [bottomRight, setBottomRight] = useState([1000, 0]);
   const [bottomLeft, setBottomLeft] = useState([1000, 0]);
-  const [mousePos, setMousePos] = useState([0, 0]);
   const [fade, setFade] = useState(false);
 
   const [choice, setChoice] = useState('none');
@@ -29,10 +28,6 @@ export default function Home() {
     setBottomLeft([x * 0.2 + 40, y * 0.8 + 40]);
   }
 
-  function trackMouse(e) {
-    setMousePos([e.clientX, e.clientY]);
-  }
-
   function chooseAboutMe() {
     setChoice('aboutme');
   }
@@ -48,21 +43,15 @@ export default function Home() {
   }
 
   return (
-    <div className="h-screen w-full  bg-black p-10" onMouseMove={(e) => trackMouse(e)}>
+    <div className="h-screen w-full  bg-black p-10">
       <div
         className="h-full  border-4 border-white outline outline-[40px] outline-black"
         ref={edgeRef}
         onClick={(e) => chooseNone(e)}
       >
-        <Magnetic offset={topLeft} text="Jarrett" size="text-6xl" mousePos={mousePos} />
-        <Magnetic
-          offset={bottomRight}
-          text="projects"
-          size="text-3xl"
-          mousePos={mousePos}
-          setSelected={chooseProjects}
-        />
-        <Magnetic offset={bottomLeft} text="about me" size="text-3xl" mousePos={mousePos} setSelected={chooseAboutMe} />
+        <Magnetic offset={topLeft} text="Jarrett" size="text-6xl" />
+        <Magnetic offset={bottomRight} text="projects" size="text-3xl" setSelected={chooseProjects} />
+        <Magnetic offset={bottomLeft} text="about me" size="text-3xl" setSelected={chooseAboutMe} />
         <AboutMe selected={choice} />
         <Projects selected={choice} />
 
