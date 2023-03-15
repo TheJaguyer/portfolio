@@ -23,7 +23,7 @@ module.exports = {
       keyframes: {
         scroll: {
           '0%': { transform: 'translate(0)' },
-          '100%': { transform: 'translate(-60em)' }
+          '100%': { transform: 'translate(-80em)' }
         }
       }
     }
@@ -36,7 +36,9 @@ module.exports = {
         extend: {
           // colors is used here for demonstration purposes
           colors: {
-            primary: 'red'
+            content: 'white',
+            link: 'rgb(156, 173, 175)',
+            hilite: 'white'
           }
         }
       },
@@ -44,12 +46,14 @@ module.exports = {
         {
           // name your theme anything that could be a valid css selector
           // remember what you named your theme because you will use it as a class to enable the theme
-          name: 'my-theme',
+          name: 'dark',
           // put any overrides your theme has here
           // just as if you were to extend tailwind's theme like normal https://tailwindcss.com/docs/theme#extending-the-default-theme
           extend: {
             colors: {
-              primary: 'blue'
+              content: 'red',
+              link: 'rgb(156, 173, 175)',
+              hilite: 'blue'
             }
           }
         }

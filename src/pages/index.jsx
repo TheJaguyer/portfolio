@@ -7,9 +7,9 @@ import Projects from '@/components/Projects';
 export default function Home() {
   const edgeRef = useRef(null);
 
-  const [topLeft, setTopLeft] = useState([200, 200]);
-  const [bottomRight, setBottomRight] = useState([400, 400]);
-  const [bottomLeft, setBottomLeft] = useState([200, 400]);
+  const [topLeft, setTopLeft] = useState([1000, 0]);
+  const [bottomRight, setBottomRight] = useState([1000, 0]);
+  const [bottomLeft, setBottomLeft] = useState([1000, 0]);
   const [mousePos, setMousePos] = useState([0, 0]);
   const [fade, setFade] = useState(false);
 
@@ -48,9 +48,9 @@ export default function Home() {
   }
 
   return (
-    <div className="h-screen w-full bg-black p-10" onMouseMove={(e) => trackMouse(e)}>
+    <div className="h-screen w-full  bg-black p-10" onMouseMove={(e) => trackMouse(e)}>
       <div
-        className="h-full   border-4 border-white outline outline-[40px] outline-black"
+        className="h-full  border-4 border-white outline outline-[40px] outline-black"
         ref={edgeRef}
         onClick={(e) => chooseNone(e)}
       >
