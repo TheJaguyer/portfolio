@@ -22,10 +22,6 @@ export default function Magnetic({ text, size, offset, mousePos, setSelected }) 
       onMouseEnter={setSelected}
     >
       {text}
-
-      {/* <div className="mt-2 h-4 w-full rounded-lg bg-black">
-        <div className="h-full w-0 rounded-lg bg-gray-500 transition-all ease-linear" style={{ width: 50 + '%' }}></div>
-      </div> */}
     </div>
   );
 }
