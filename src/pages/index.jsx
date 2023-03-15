@@ -3,6 +3,7 @@ import Magnetic from '@/components/Magnetic';
 import AboutMe from '@/components/AboutMe';
 import Masks from '@/components/Masks';
 import Projects from '@/components/Projects';
+import Jarrett from '@/components/Jarrett';
 
 export default function Home() {
   const edgeRef = useRef(null);
@@ -36,6 +37,10 @@ export default function Home() {
     setChoice('projects');
   }
 
+  function chooseJarrett() {
+    setChoice('jarrett');
+  }
+
   function chooseNone(e) {
     if (edgeRef.current == e.target && choice != 'none') {
       setChoice('none');
@@ -49,11 +54,12 @@ export default function Home() {
         ref={edgeRef}
         onClick={(e) => chooseNone(e)}
       >
-        <Magnetic offset={topLeft} text="Jarrett" size="text-6xl" />
+        <Magnetic offset={topLeft} text="Jarrett" size="text-6xl" setSelected={chooseJarrett} />
         <Magnetic offset={bottomRight} text="projects" size="text-3xl" setSelected={chooseProjects} />
         <Magnetic offset={bottomLeft} text="about me" size="text-3xl" setSelected={chooseAboutMe} />
         <AboutMe selected={choice} />
         <Projects selected={choice} />
+        <Jarrett selected={choice} />
 
         <div
           className="absolute right-0 top-0 h-full w-full border-4 border-white bg-black  transition-all delay-200 duration-500 ease-in-out"
