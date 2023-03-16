@@ -7,7 +7,7 @@ export default function Jarrett({ selected, exit }) {
   useEffect(() => {
     if (selected == 'jarrett') {
       setStyle({
-        width: 'max-content',
+        width: '38rem',
         maxWidth: '100vw',
         height: '8rem',
         padding: '40px',
