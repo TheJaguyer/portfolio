@@ -20,6 +20,7 @@ export default function Magnetic({ text, size, offset, mousePos, setSelected }) 
       className={`absolute cursor-default bg-black text-white ${size}`}
       style={style}
       onMouseEnter={setSelected}
+      onClick={setSelected}
     >
       {text}
     </div>

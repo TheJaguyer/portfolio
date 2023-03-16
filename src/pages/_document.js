@@ -7,7 +7,7 @@ export default function Document() {
         <title>Jarrett Guyer</title>
         <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
       </Head>
-      <body className="overflow-hidden font-mono">
+      <body className="min-h-[15rem] min-w-[27.5rem] overflow-hidden font-mono">
         <Main />
         <NextScript />
       </body>

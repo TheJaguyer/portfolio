@@ -24,9 +24,9 @@ export default function Home() {
   function getSize() {
     let x = edgeRef.current.clientWidth;
     let y = edgeRef.current.clientHeight;
-    setTopLeft([x * 0.2 + 40, y * 0.2 + 40]);
-    setBottomRight([x * 0.8 + 40, y * 0.8 + 40]);
-    setBottomLeft([x * 0.2 + 40, y * 0.8 + 40]);
+    setTopLeft([Math.max(x * 0.2 + 40, 180), Math.max(y * 0.2 + 40, 88)]);
+    setBottomRight([Math.min(x * 0.8 + 40, x - 40), Math.min(y * 0.8 + 40, y + 10)]);
+    setBottomLeft([Math.max(x * 0.2 + 40, 132), Math.min(y * 0.8 + 40, y + 10)]);
   }
 
   function chooseAboutMe() {
@@ -47,6 +47,10 @@ export default function Home() {
     }
   }
 
+  function exit() {
+    // setChoice('none');
+  }
+
   return (
     <div className="h-screen w-full  bg-black p-10">
       <div
@@ -57,9 +61,9 @@ export default function Home() {
         <Magnetic offset={topLeft} text="Jarrett" size="text-6xl" setSelected={chooseJarrett} />
         <Magnetic offset={bottomRight} text="projects" size="text-3xl" setSelected={chooseProjects} />
         <Magnetic offset={bottomLeft} text="about me" size="text-3xl" setSelected={chooseAboutMe} />
-        <AboutMe selected={choice} />
-        <Projects selected={choice} />
-        <Jarrett selected={choice} />
+        <AboutMe selected={choice} exit={exit} />
+        <Projects selected={choice} exit={exit} />
+        <Jarrett selected={choice} exit={exit} />
 
         <div
           className="absolute right-0 top-0 h-full w-full border-4 border-white bg-black  transition-all delay-200 duration-500 ease-in-out"
