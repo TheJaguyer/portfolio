@@ -1,7 +1,7 @@
 export default function AboutMeFill() {
   return (
     <div className="flex h-full w-full flex-col gap-4  text-white">
-      <div className=" text-[2rem]">about me</div>
+      <div className="-mt-6 text-[2rem]">about me</div>
 
       <div>
         After being an Army Officer for 5 years, I chose to continue my dream of improving the lives of others. The

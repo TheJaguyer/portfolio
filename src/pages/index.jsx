@@ -48,7 +48,7 @@ export default function Home() {
   }
 
   function exit() {
-    // setChoice('none');
+    setChoice('none');
   }
 
   return (
