@@ -1,10 +1,10 @@
 export default function Masks() {
   return (
     <>
-      <div className="absolute top-0 left-0 h-10 w-full bg-black"></div>
-      <div className="absolute bottom-0 left-0 h-10 w-full bg-black"></div>
-      <div className="absolute top-0 left-0 h-full w-10 bg-black"></div>
-      <div className="absolute top-0 right-0 h-full w-10 bg-black"></div>
+      <div className="mask mask-left"></div>
+      <div className="mask mask-right"></div>
+      <div className="mask mask-top"></div>
+      <div className="mask mask-bottom"></div>
     </>
   );
 }

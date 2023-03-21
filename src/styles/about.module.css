@@ -1,0 +1,38 @@
+.container {
+  color: white;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+}
+
+.title {
+  font-size: 2rem;
+}
+
+.scrollContainer {
+  width: 80%;
+  overflow-y: hidden;
+  height: max-content;
+}
+
+.scroller {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  width: 160rem;
+  animation: scroller 10s;
+}
+
+.scrollItem {
+  min-width: max-content;
+  text-align: center;
+}
+
+@keyframes scroller {
+  from {
+    left: 0;
+  }
+  to {
+    left: -80rem;
+  }
+}

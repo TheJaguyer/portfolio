@@ -1,7 +1,9 @@
+import styles from '@/styles/about.module.css';
+
 export default function AboutMeFill() {
   return (
-    <div className="flex h-full w-full flex-col gap-4  text-white">
-      <div className="-mt-6 text-[2rem]">about me</div>
+    <div className={styles.container}>
+      <div className={styles.title}>about me</div>
 
       <div>
         After being an Army Officer for 5 years, I chose to continue my dream of improving the lives of others. The
@@ -11,23 +13,23 @@ export default function AboutMeFill() {
 
       <div>Please join my cat and I as we make this dream a reality.</div>
 
-      <div className="w-full overflow-hidden  after:shadow-edges">
-        <div className=" flex w-[160em] animate-scroller flex-row justify-around">
-          <div className="min-w-max text-center">West Point Grad</div>
-          <div className="min-w-max text-center">Cat Dad</div>
-          <div className="min-w-max text-center">Particle Physicist</div>
-          <div className="min-w-max text-center">Avid Snowboarder</div>
-          <div className="min-w-max text-center">Mediocre Destiny 2 Player</div>
-          <div className="min-w-max text-center">Dark Mode Advocate</div>
-          <div className="min-w-max text-center">World Traveler</div>
+      <div className={styles.scrollContainer}>
+        <div className={styles.scroller}>
+          <div className={styles.scrollItem}>West Point Grad</div>
+          <div className={styles.scrollItem}>Cat Dad</div>
+          <div className={styles.scrollItem}>Particle Physicist</div>
+          <div className={styles.scrollItem}>Avid Snowboarder</div>
+          <div className={styles.scrollItem}>Mediocre Destiny 2 Player</div>
+          <div className={styles.scrollItem}>Dark Mode Advocate</div>
+          <div className={styles.scrollItem}>World Traveler</div>
           {/* must repeat to allow for smooth rotation */}
-          <div className="min-w-max text-center">West Point Grad</div>
-          <div className="min-w-max text-center">Cat Dad</div>
-          <div className="min-w-max text-center">Particle Physicist</div>
-          <div className="min-w-max text-center">Avid Snowboarder</div>
-          <div className="min-w-max text-center">Mediocre Destiny 2 Player</div>
-          <div className="min-w-max text-center">Dark Mode Advocate</div>
-          <div className="min-w-max text-center">World Traveler</div>
+          <div className={styles.scrollItem}>West Point Grad</div>
+          <div className={styles.scrollItem}>Cat Dad</div>
+          <div className={styles.scrollItem}>Particle Physicist</div>
+          <div className={styles.scrollItem}>Avid Snowboarder</div>
+          <div className={styles.scrollItem}>Mediocre Destiny 2 Player</div>
+          <div className={styles.scrollItem}>Dark Mode Advocate</div>
+          <div className={styles.scrollItem}>World Traveler</div>
         </div>
       </div>
 
