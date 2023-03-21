@@ -1,30 +1,48 @@
-import { useState, useEffect } from 'react';
-import AboutMeFill from './AboutMeFill';
-
-export default function AboutMe({ selected, exit }) {
-  const [style, setStyle] = useState({ padding: '0', paddingLeft: '0', paddingBottom: '0' });
-  useEffect(() => {
-    if (selected == 'aboutme') {
-      setStyle({
-        width: '54rem',
-
-        maxWidth: '98vw',
-        height: '28rem',
-        padding: '40px',
-        paddingLeft: '80px',
-        paddingBottom: '80px'
-      });
-    } else {
-      setStyle({ padding: '0', paddingLeft: '0', paddingBottom: '0' });
-    }
-  }, [selected]);
+export default function AboutMe() {
   return (
-    <div
-      onMouseLeave={exit}
-      className="absolute bottom-0 left-0 h-10 w-10 overflow-hidden border-t-4 border-r-4 border-white bg-black transition-all duration-300 ease-bounce "
-      style={style}
-    >
-      <AboutMeFill />
+    <div className="fillContainer">
+      <div className="title">about me</div>
+
+      <div>
+        After being an Army Officer for 5 years, I chose to continue my dream of improving the lives of others. The
+        world becomes more connected every day, leading to new joys and hidden challenges. I believe every problem can
+        be overcome with the compassionate application of state-of-the-art technology.
+      </div>
+
+      <div>Please join my cat and I as we make this dream a reality.</div>
+
+      <div className="scrollContainer">
+        <div className="scroller">
+          <div className="scrollItem">West Point Grad</div>
+          <div className="scrollItem">Cat Dad</div>
+          <div className="scrollItem">Particle Physicist</div>
+          <div className="scrollItem">Avid Snowboarder</div>
+          <div className="scrollItem">Mediocre Destiny 2 Player</div>
+          <div className="scrollItem">Dark Mode Advocate</div>
+          <div className="scrollItem">World Traveler</div>
+          {/* must repeat to allow for smooth rotation */}
+          <div className="scrollItem">West Point Grad</div>
+          <div className="scrollItem">Cat Dad</div>
+          <div className="scrollItem">Particle Physicist</div>
+          <div className="scrollItem">Avid Snowboarder</div>
+          <div className="scrollItem">Mediocre Destiny 2 Player</div>
+          <div className="scrollItem">Dark Mode Advocate</div>
+          <div className="scrollItem">World Traveler</div>
+        </div>
+      </div>
+
+      <div className="linkRow">
+        <a href="https://github.com/TheJaguyer" target="_blank" className="link">
+          github
+        </a>
+        <a href="https://www.linkedin.com/in/thejaguyer/" target="_blank" className="link">
+          linkedin
+        </a>
+
+        <a href="#" download className="link">
+          resume
+        </a>
+      </div>
     </div>
   );
 }
