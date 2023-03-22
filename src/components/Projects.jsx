@@ -1,4 +1,4 @@
-export default function AboutMeFill() {
+export default function Projects() {
   return (
     <div className="fillContainer">
       <div className="title">projects</div>

@@ -32,14 +32,14 @@ export default function AboutMe() {
       </div>
 
       <div className="linkRow">
-        <a href="https://github.com/TheJaguyer" target="_blank" className="link">
+        <a href="https://github.com/TheJaguyer" target="_blank" className="link medium">
           github
         </a>
-        <a href="https://www.linkedin.com/in/thejaguyer/" target="_blank" className="link">
+        <a href="https://www.linkedin.com/in/thejaguyer/" target="_blank" className="link medium">
           linkedin
         </a>
 
-        <a href="#" download className="link">
+        <a href="#" download className="link medium">
           resume
         </a>
       </div>

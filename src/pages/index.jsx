@@ -4,6 +4,7 @@ import Masks from '@/components/Masks';
 import Option from '@/components/Option';
 import AboutMe from '@/components/AboutMe';
 import Projects from '@/components/Projects';
+import Contact from '@/components/Contact';
 
 export default function Home() {
   const [fade, setFade] = useState(false);
@@ -20,13 +21,13 @@ export default function Home() {
 
   return (
     <main className="main">
-      <div className="content">
+      <div className="content" onTouchEnd={exit}>
         <Option name="name-option option" content="Jarrett" setSelected={() => setChoice('jarrett')} />
         <Option name="about-option option" content="about me" setSelected={() => setChoice('about')} />
         <Option name="projects-option option" content="projects" setSelected={() => setChoice('projects')} />
         <Slider choice={choice} exit={exit} name="about-slider" match="about" child={<AboutMe />} />
         <Slider choice={choice} exit={exit} name="projects-slider" match="projects" child={<Projects />} />
-        <Slider choice={choice} exit={exit} name="name-slider" match="jarrett" />
+        <Slider choice={choice} exit={exit} name="name-slider" match="jarrett" child={<Contact />} />
         <Masks />
       </div>
     </main>
