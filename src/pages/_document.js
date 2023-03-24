@@ -5,6 +5,7 @@ export default function Document() {
     <Html lang="en">
       <Head>
         <title>Jarrett Guyer</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
         <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
       </Head>
       <body>
