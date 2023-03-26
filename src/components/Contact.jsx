@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import styles from '@/styles/contact.module.css';
 
 export default function Contact() {
   const [hovered, setHovered] = useState(false);
@@ -19,14 +20,14 @@ export default function Contact() {
   }
 
   return (
-    <div className="fillContainer">
-      <div className="copyText" style={{ color: hovered ? 'white' : 'black' }}>
+    <div className={styles.content}>
+      <div className={styles.message} style={{ color: hovered ? 'white' : 'black' }}>
         {message}
       </div>
-      <div className="linkRow">
-        <div className="medium">contact me:</div>
+      <div className={styles.row}>
+        <div className={styles.title}>contact me:</div>
         <div
-          className="link medium"
+          className={styles.email}
           onClick={copy}
           onTouchEnd={copy}
           onMouseEnter={handleEnter}

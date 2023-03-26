@@ -11,7 +11,7 @@ export default function AboutMe({ choice, exit, name, child }) {
     }
   }, [choice]);
   return (
-    <div onMouseLeave={exit} className={`${styles.slider} ${styles[name]} ${styles[type]}`}>
+    <div onMouseLeave={() => exit(false)} className={`${styles.slider} ${styles[name]} ${styles[type]}`}>
       {child}
     </div>
   );

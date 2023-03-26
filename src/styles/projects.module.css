@@ -1,0 +1,63 @@
+.content {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 1em;
+  color: white;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  padding: 1.5em;
+  overflow: hidden;
+}
+
+.title {
+  font-size: 1.5em;
+}
+
+.row {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.github {
+  all: unset;
+  color: gray;
+  cursor: pointer;
+
+  font-size: 1em;
+}
+
+.github:hover {
+  color: white;
+}
+
+.link {
+  all: unset;
+  color: gray;
+  cursor: pointer;
+
+  font-size: 1em;
+}
+
+.link:hover {
+  color: white;
+}
+
+@media (max-width: 700px) {
+  .content {
+    overflow-y: scroll;
+  }
+  .row {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .github {
+    align-self: flex-end;
+  }
+}

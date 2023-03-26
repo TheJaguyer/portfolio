@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import Slider from '@/components/Slider';
 import Masks from '@/components/Masks';
 import AboutMe from '@/components/AboutMe';
@@ -8,6 +8,7 @@ import styles from '@/styles/index.module.css';
 
 export default function Home() {
   const [fade, setFade] = useState(false);
+  const container = useRef(null);
 
   const [choice, setChoice] = useState('none');
 
@@ -15,15 +16,15 @@ export default function Home() {
     setFade(true);
   }, []);
 
-  function exit() {
-    if (choice != 'none') {
+  function exit(e) {
+    if ((choice != 'none' && e.target == container.current) || e == false) {
       setChoice('none');
     }
   }
 
   return (
     <main className={styles.main}>
-      <div className={styles.content} onTouchEnd={exit}>
+      <div className={styles.content} ref={container} onTouchEnd={(e) => exit(e)}>
         <div className={`${styles.jarrett} ${styles.option}`} onMouseEnter={() => setChoice('jarrett')}>
           Jarrett
         </div>

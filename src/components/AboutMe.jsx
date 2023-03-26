@@ -1,7 +1,9 @@
+import styles from '@/styles/about.module.css';
+
 export default function AboutMe() {
   return (
-    <div className="fillContainer">
-      <div className="title">about me</div>
+    <div className={styles.content}>
+      <div className={styles.title}>about me</div>
 
       <div>
         After being an Army Officer for 5 years, I chose to continue my dream of improving the lives of others. The
@@ -11,35 +13,35 @@ export default function AboutMe() {
 
       <div>Please join my cat and I as we make this dream a reality.</div>
 
-      <div className="scrollContainer">
-        <div className="scroller">
-          <div className="scrollItem">West Point Grad</div>
-          <div className="scrollItem">Cat Dad</div>
-          <div className="scrollItem">Particle Physicist</div>
-          <div className="scrollItem">Avid Snowboarder</div>
-          <div className="scrollItem">Mediocre Destiny 2 Player</div>
-          <div className="scrollItem">Dark Mode Advocate</div>
-          <div className="scrollItem">World Traveler</div>
+      <div className={styles.scrollContainer}>
+        <div className={styles.scroller}>
+          <div className={styles.scrollItem}>West Point Grad</div>
+          <div className={styles.scrollItem}>Cat Dad</div>
+          <div className={styles.scrollItem}>Particle Physicist</div>
+          <div className={styles.scrollItem}>Avid Snowboarder</div>
+          <div className={styles.scrollItem}>Mediocre Destiny 2 Player</div>
+          <div className={styles.scrollItem}>Dark Mode Advocate</div>
+          <div className={styles.scrollItem}>World Traveler</div>
           {/* must repeat to allow for smooth rotation */}
-          <div className="scrollItem">West Point Grad</div>
-          <div className="scrollItem">Cat Dad</div>
-          <div className="scrollItem">Particle Physicist</div>
-          <div className="scrollItem">Avid Snowboarder</div>
-          <div className="scrollItem">Mediocre Destiny 2 Player</div>
-          <div className="scrollItem">Dark Mode Advocate</div>
-          <div className="scrollItem">World Traveler</div>
+          <div className={styles.scrollItem}>West Point Grad</div>
+          <div className={styles.scrollItem}>Cat Dad</div>
+          <div className={styles.scrollItem}>Particle Physicist</div>
+          <div className={styles.scrollItem}>Avid Snowboarder</div>
+          <div className={styles.scrollItem}>Mediocre Destiny 2 Player</div>
+          <div className={styles.scrollItem}>Dark Mode Advocate</div>
+          <div className={styles.scrollItem}>World Traveler</div>
         </div>
       </div>
 
-      <div className="linkRow">
-        <a href="https://github.com/TheJaguyer" target="_blank" className="link medium">
+      <div className={styles.row}>
+        <a href="https://github.com/TheJaguyer" target="_blank" className={styles.link}>
           github
         </a>
-        <a href="https://www.linkedin.com/in/thejaguyer/" target="_blank" className="link medium">
+        <a href="https://www.linkedin.com/in/thejaguyer/" target="_blank" className={styles.link}>
           linkedin
         </a>
 
-        <a href="#" download className="link medium">
+        <a href="#" download className={styles.link}>
           resume
         </a>
       </div>

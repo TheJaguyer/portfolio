@@ -1,0 +1,49 @@
+.content {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 1em;
+  color: white;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  padding: 1.5em;
+  overflow: hidden;
+}
+
+.title {
+  font-size: 1.5em;
+}
+
+.row {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.email {
+  all: unset;
+  color: gray;
+  cursor: pointer;
+
+  font-size: 1.5em;
+}
+
+.email:hover {
+  color: white;
+}
+
+.message {
+  transition: color 250ms ease-in-out;
+  margin-left: auto;
+}
+
+@media (max-width: 700px) {
+  .title {
+    font-size: 1em;
+  }
+
+  .email {
+    font-size: 1em;
+  }
+}

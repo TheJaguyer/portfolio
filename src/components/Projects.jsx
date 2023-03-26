@@ -1,14 +1,16 @@
+import styles from '@/styles/projects.module.css';
+
 export default function Projects() {
   return (
-    <div className="fillContainer">
-      <div className="title">projects</div>
+    <div className={styles.content}>
+      <div className={styles.title}>projects</div>
       {/* First Project */}
       <div>
-        <div className="linkRow">
-          <a href="#" target="_blank" className="link">
+        <div className={styles.row}>
+          <a href="#" target="_blank" className={styles.link}>
             amazon clone
           </a>
-          <a href="https://github.com/TheJaguyer/FEC-Amazon-Clone" target="_blank" className="link">
+          <a href="https://github.com/TheJaguyer/FEC-Amazon-Clone" target="_blank" className={styles.github}>
             view on github
           </a>
         </div>
@@ -19,11 +21,11 @@ export default function Projects() {
       </div>
       {/* Second Project */}
       <div>
-        <div className="linkRow">
-          <a href="#" target="_blank" className="link">
+        <div className={styles.row}>
+          <a href="#" target="_blank" className={styles.link}>
             technical interview application
           </a>
-          <a href="https://github.com/TheJaguyer/admissions-hub" target="_blank" className="link">
+          <a href="https://github.com/TheJaguyer/admissions-hub" target="_blank" className={styles.github}>
             view on github
           </a>
         </div>
@@ -34,11 +36,11 @@ export default function Projects() {
       </div>
       {/* Third Project */}
       <div>
-        <div className="linkRow">
-          <a href="https://thejaguyer.github.io/Pixel-Art-Maker/" target="_blank" className="link">
+        <div className={styles.row}>
+          <a href="https://thejaguyer.github.io/Pixel-Art-Maker/" target="_blank" className={styles.link}>
             pixel art maker
           </a>
-          <a href="https://github.com/TheJaguyer/Pixel-Art-Maker" target="_blank" className="link">
+          <a href="https://github.com/TheJaguyer/Pixel-Art-Maker" target="_blank" className={styles.github}>
             view on github
           </a>
         </div>

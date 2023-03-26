@@ -1,0 +1,35 @@
+.left {
+  position: absolute;
+  background-color: black;
+  top: 0px;
+  left: 0px;
+  width: 40px;
+  height: 100%;
+}
+
+.right {
+  position: absolute;
+  background-color: black;
+  top: 0px;
+  right: 0px;
+  width: 40px;
+  height: 100%;
+}
+
+.top {
+  position: absolute;
+  background-color: black;
+  top: 0px;
+  left: 0px;
+  height: 40px;
+  width: 100%;
+}
+
+.bottom {
+  position: absolute;
+  background-color: black;
+  bottom: 0px;
+  left: 0px;
+  height: 40px;
+  width: 100%;
+}
