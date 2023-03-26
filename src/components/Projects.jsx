@@ -7,9 +7,23 @@ export default function Projects() {
       {/* First Project */}
       <div>
         <div className={styles.row}>
-          <a href="#" target="_blank" className={styles.link}>
-            amazon clone
+          <div className={styles.subtitle}>technical interview application</div>
+
+          <a href="https://github.com/TheJaguyer/admissions-hub" target="_blank" className={styles.github}>
+            view on github
           </a>
+        </div>
+        <div>
+          A mock multipage application to track the status of technical interviews, complete with a functioning
+          shared-coding space. Six person agile team, using NextJS, React, Docker, and PSQL.
+        </div>
+      </div>
+
+      {/* Second Project */}
+      <div>
+        <div className={styles.row}>
+          <div className={styles.subtitle}>amazon clone</div>
+
           <a href="https://github.com/TheJaguyer/FEC-Amazon-Clone" target="_blank" className={styles.github}>
             view on github
           </a>
@@ -19,26 +33,12 @@ export default function Projects() {
           using Vite, React, PSQL, and Express.
         </div>
       </div>
-      {/* Second Project */}
-      <div>
-        <div className={styles.row}>
-          <a href="#" target="_blank" className={styles.link}>
-            technical interview application
-          </a>
-          <a href="https://github.com/TheJaguyer/admissions-hub" target="_blank" className={styles.github}>
-            view on github
-          </a>
-        </div>
-        <div>
-          A mock multipage application to track the status of technical interviewers, complete with functioning
-          shared-coding space. Six person agile team, using NextJS, React, PSQL.
-        </div>
-      </div>
       {/* Third Project */}
       <div>
         <div className={styles.row}>
+          <div className={styles.subtitle}>pixel art maker</div>
           <a href="https://thejaguyer.github.io/Pixel-Art-Maker/" target="_blank" className={styles.link}>
-            pixel art maker
+            view live
           </a>
           <a href="https://github.com/TheJaguyer/Pixel-Art-Maker" target="_blank" className={styles.github}>
             view on github
