@@ -7,6 +7,6 @@
 html,
 #__next,
 body {
-  height: 100vh;
+  height: -webkit-fill-available;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
