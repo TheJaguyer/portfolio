@@ -80,3 +80,17 @@
     padding: 0px;
   }
 }
+
+@media (min-width: 1100px) {
+  .shown {
+    font-size: 1rem;
+    width: 50%;
+  }
+
+  .hidden {
+    font-size: 1rem;
+    height: 0px;
+    width: 0px;
+    padding: 0px;
+  }
+}
