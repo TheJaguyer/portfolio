@@ -10,7 +10,7 @@
 .shown {
   font-size: 1rem;
   height: 26rem;
-  width: 36rem;
+  width: max(36rem, 50%);
 }
 
 .jarrett {
@@ -27,6 +27,9 @@
   right: 0px;
   padding-bottom: 40px;
   padding-right: 40px;
+
+  display: flex;
+  justify-content: flex-start;
 }
 
 .about {
@@ -34,6 +37,8 @@
   left: 0px;
   padding-bottom: 40px;
   padding-left: 40px;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .hidden {
@@ -77,20 +82,6 @@
     font-size: 1rem;
     height: 0px;
     width: 100%;
-    padding: 0px;
-  }
-}
-
-@media (min-width: 1100px) {
-  .shown {
-    font-size: 1rem;
-    width: 50%;
-  }
-
-  .hidden {
-    font-size: 1rem;
-    height: 0px;
-    width: 0px;
     padding: 0px;
   }
 }
