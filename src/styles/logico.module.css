@@ -11,13 +11,6 @@
   width: 640px;
   height: 360px;
   outline: 4px solid white;
-  margin: auto;
   overflow: hidden;
   flex: none;
-}
-
-@media (max-width: 640px) {
-  .player {
-    transform: rotate(90deg);
-  }
 }
