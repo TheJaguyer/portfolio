@@ -10,15 +10,22 @@ export default function Logico() {
     codeUrl: '/Build/Builds.wasm'
   });
 
-  const [devicePixelRatio, setDevicePixelRatio] = useState(window.devicePixelRatio);
+  const [devicePixelRatio, setDevicePixelRatio] = useState();
 
   useEffect(() => {
     return () => {
       detachAndUnloadImmediate().catch((reason) => {
         console.log(reason);
       });
+      setDevicePixelRatio(window.devicePixelRatio);
     };
   }, [detachAndUnloadImmediate]);
+
+  useEffect(() => {
+    setDevicePixelRatio(window.devicePixelRatio);
+  }, []);
+
+  useEffect;
 
   return (
     <div className={styles.wrapper}>
