@@ -52,6 +52,7 @@
 @media (max-width: 700px) {
   .content {
     overflow-y: scroll;
+    height: 80%;
   }
   .row {
     display: flex;

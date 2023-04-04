@@ -1,9 +1,24 @@
 import styles from '@/styles/projects.module.css';
+import Link from 'next/link';
 
 export default function Projects() {
   return (
     <div className={styles.content}>
       <div className={styles.title}>projects</div>
+      {/* Latest */}
+      <div>
+        <div className={styles.row}>
+          <div className={styles.subtitle}>Logico: Simple Logic Game</div>
+
+          <Link href="/Logico" target="_blank" className={styles.github}>
+            try it out
+          </Link>
+        </div>
+        <div>
+          A simple logic diagramming tool made in Unity with C#, made with the goal of learning Unity and a new
+          language.
+        </div>
+      </div>
       {/* First Project */}
       <div>
         <div className={styles.row}>

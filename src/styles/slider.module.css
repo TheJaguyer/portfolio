@@ -27,6 +27,8 @@
   right: 0px;
   padding-bottom: 40px;
   padding-right: 40px;
+  width: 44rem;
+  height: calc(100% - 36px);
 
   display: flex;
   justify-content: flex-start;
