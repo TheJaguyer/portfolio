@@ -10,6 +10,8 @@ export default function Logico() {
     codeUrl: '/Build/Builds.wasm'
   });
 
+  const [devicePixelRatio, setDevicePixelRatio] = useState(window.devicePixelRatio);
+
   useEffect(() => {
     return () => {
       detachAndUnloadImmediate().catch((reason) => {
@@ -20,7 +22,13 @@ export default function Logico() {
 
   return (
     <div className={styles.wrapper}>
-      <Unity width={640} height={360} className={styles.player} unityProvider={unityProvider} />
+      <Unity
+        width={640}
+        height={360}
+        className={styles.player}
+        unityProvider={unityProvider}
+        devicePixelRatio={devicePixelRatio}
+      />
     </div>
   );
 }
