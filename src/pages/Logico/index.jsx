@@ -1,5 +1,5 @@
 import { Unity, useUnityContext } from 'react-unity-webgl';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import styles from '@/styles/logico.module.css';
 
 export default function Logico() {
