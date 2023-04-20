@@ -41,7 +41,7 @@ export default function AboutMe() {
           linkedin
         </a>
 
-        <a href="#" download className={styles.link}>
+        <a href="/Jarrett_Guyer_Resume.docx" download className={styles.link}>
           resume
         </a>
       </div>
