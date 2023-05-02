@@ -6,7 +6,7 @@ export default function Projects() {
     <div className={styles.content}>
       <div className={styles.title}>projects</div>
       {/* Latest */}
-      {/* <div>
+      <div>
         <div className={styles.row}>
           <div className={styles.subtitle}>Logico: Simple Logic Game</div>
 
@@ -18,7 +18,7 @@ export default function Projects() {
           A simple logic diagramming tool made in Unity with C#, made with the goal of learning Unity and a new
           language.
         </div>
-      </div> */}
+      </div>
       {/* First Project */}
       <div>
         <div className={styles.row}>
